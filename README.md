@@ -58,6 +58,16 @@ Returns token used for authorization on other endpoints, and user's info.
 
 [POST] `/api/students`
 
+```json
+{
+{
+	"user_id":"4",
+	"studentName":"John Lee",
+	"studentEmail":"johnlee@gmail.com"
+}
+}
+```
+
 ### Edit a student
 
 [PUT] `/api/students/:studentId`
