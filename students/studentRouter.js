@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
 router.get("/:studentId", (req, res) => {
   db.findById(req.params.studentId)
     .then((student) => {
-      res.status(200).json(student).first();
+      res.status(200).json(student);
     })
     .catch((err) => {
       console.log(err);
