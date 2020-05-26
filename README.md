@@ -60,11 +60,9 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ```json
 {
-{
-	"user_id":"4",
-	"studentName":"John Lee",
-	"studentEmail":"johnlee@gmail.com"
-}
+  "user_id": "4",
+  "studentName": "John Lee",
+  "studentEmail": "johnlee@gmail.com"
 }
 ```
 
