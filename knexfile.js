@@ -39,9 +39,7 @@ module.exports = {
 
   production: {
     client: "pg",
-    connection: {
-      filename: "./database/app.db3",
-    },
+    connection: pgConnection,
     pool: {
       min: 2,
       max: 10,
