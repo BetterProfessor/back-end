@@ -76,6 +76,38 @@ Returns token used for authorization on other endpoints, and user's info.
 
 [DELETE] `/api/students/:studentId`
 
+## Projects
+
+### Get all projects:
+
+[GET] `/api/projects`
+
+### Get individual student:
+
+[GET] ``
+
+### Add a student
+
+[POST] `/api/projects`
+
+```json
+{
+{
+	"user_id":"4",
+	"studentName":"John Lee",
+	"studentEmail":"johnlee@gmail.com"
+}
+}
+```
+
+### Edit a project
+
+[PUT] `/api/students/:studentId`
+
+### Delete a student
+
+[DELETE] `/api/students/:studentId`
+
 ### Data Schemas
 
 ### User:

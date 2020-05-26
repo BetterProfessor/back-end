@@ -17,6 +17,16 @@ router.get("/", (req, res) => {
       res.status(500).json(err);
     });
 });
+router.get("/:studentId", (req, res) => {
+  db.findById(req.params.studentId)
+    .then((student) => {
+      res.status(200).json(student).first();
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 router.post("/", (req, res) => {
   db.add(req.body)
