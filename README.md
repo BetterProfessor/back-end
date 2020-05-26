@@ -46,7 +46,7 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ### get all users
 
-[FET] `/api/all`
+[GET] `/api/all`
 
 ## Students
 
