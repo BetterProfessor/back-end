@@ -1,6 +1,6 @@
 # Better Professor API:
 
-### heroku url: https://
+### heroku url: https://better-prof.herokuapp.com/
 
 ## Authentication Endpoints:
 
