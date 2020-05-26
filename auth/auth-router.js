@@ -71,6 +71,12 @@ router.post("/login", (req, res) => {
   }
 });
 
+router.get("/all", (req, res) => {
+  Users.find()
+    .then((u) => res.status(200).json(u))
+    .catch((err) => res.status(500).json(err));
+});
+
 function generateToken(user) {
   const payload = {
     subject: user.id, // sub in payload is what the token is about
