@@ -2,7 +2,7 @@ const router = require("express").Router({ mergeParams: true });
 const db = require("./reminderModel");
 const jwt = require("jsonwebtoken");
 
-router.get("/", (req, res) => {
+router.get("/get", (req, res) => {
   const token = req.headers.authorization;
   const secret = process.env.JWT_SECRET || "keepitsecret,keepitsafe!";
   jwt.verify(token, secret, (error, decodedToken) => {

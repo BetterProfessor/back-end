@@ -80,9 +80,9 @@ Returns token used for authorization on other endpoints, and user's info.
 
 [GET] `/api/projects`
 
-### Get individual student:
+### Get individual project:
 
-[GET] `/api/projects/projectId`
+[GET] `/api/projects/:projectId`
 
 ### Add a project
 
@@ -112,6 +112,44 @@ Returns token used for authorization on other endpoints, and user's info.
 
 [DELETE] `/api/students/:projectId`
 
+## Reminders
+
+### Get all reminders:
+
+[GET] `/api/reminders`
+
+### Get individual reminder:
+
+[GET] `/api/reminders/:reminderId`
+
+### Add a reminder
+
+[POST] `/api/reminders`
+
+```json
+{
+  "user_id": 5,
+  "reminderName": "Title Changes",
+  "reminderType": "Needs My Feedback"
+}
+```
+
+### Edit a reminder
+
+[PUT] `/api/students/:reminderId`
+
+```json
+{
+  "user_id": 5,
+  "reminderName": "Document Changes",
+  "reminderType": "Needs My Feedback"
+}
+```
+
+### Delete a reminder
+
+[DELETE] `/api/students/:reminderId`
+
 ### Data Schemas
 
 ### User:
@@ -135,7 +173,7 @@ Returns token used for authorization on other endpoints, and user's info.
 }
 ```
 
-### Projects:
+### reminders:
 
 ```json
 {
