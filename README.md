@@ -82,29 +82,35 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ### Get individual student:
 
-[GET] ``
+[GET] `/api/projects/projectId`
 
-### Add a student
+### Add a project
 
 [POST] `/api/projects`
 
 ```json
 {
-{
-	"user_id":"4",
-	"studentName":"John Lee",
-	"studentEmail":"johnlee@gmail.com"
-}
+  "user_id": 5,
+  "projectName": "Title Changes",
+  "projectType": "Needs My Feedback"
 }
 ```
 
 ### Edit a project
 
-[PUT] `/api/students/:studentId`
+[PUT] `/api/students/:projectId`
 
-### Delete a student
+```json
+{
+  "user_id": 5,
+  "projectName": "Document Changes",
+  "projectType": "Needs My Feedback"
+}
+```
 
-[DELETE] `/api/students/:studentId`
+### Delete a project
+
+[DELETE] `/api/students/:projectId`
 
 ### Data Schemas
 
@@ -126,5 +132,15 @@ Returns token used for authorization on other endpoints, and user's info.
   "user_id": "4",
   "studentName": "John Lee",
   "studentEmail": "johnlee@gmail.com"
+}
+```
+
+### Projects:
+
+```json
+{
+  "user_id": 5,
+  "projectName": "Document Changes",
+  "projectType": "Needs My Feedback"
 }
 ```
