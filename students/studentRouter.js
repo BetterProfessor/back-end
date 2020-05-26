@@ -17,6 +17,7 @@ router.get("/", (req, res) => {
       res.status(500).json(err);
     });
 });
+
 router.get("/:studentId", (req, res) => {
   db.findById(req.params.studentId)
     .then((student) => {

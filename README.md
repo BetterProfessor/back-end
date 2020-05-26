@@ -44,6 +44,10 @@ Required fields for logging in a user:
 
 Returns token used for authorization on other endpoints, and user's info.
 
+### get all users
+
+[GET] `/api/all`
+
 ## Students
 
 ### Get all students:
@@ -80,9 +84,9 @@ Returns token used for authorization on other endpoints, and user's info.
 
 [GET] `/api/projects`
 
-### Get individual student:
+### Get individual project:
 
-[GET] `/api/projects/projectId`
+[GET] `/api/projects/:projectId`
 
 ### Add a project
 
@@ -112,6 +116,47 @@ Returns token used for authorization on other endpoints, and user's info.
 
 [DELETE] `/api/students/:projectId`
 
+## Reminders
+
+### Get all reminders:
+
+[GET] `/api/reminders/get`
+
+### Get individual reminder:
+
+[GET] `/api/reminders/get/:reminderId`
+
+### Add a reminder
+
+[POST] `/api/reminders`
+
+```json
+{
+  "user_id": 8,
+  "studentName": "Yee Lin",
+  "dueDate": "2020-10-08",
+  "dueTime": "09:29:30",
+  "reminder": "Lorem ipsum dolor sit amet"
+}
+```
+
+### Edit a reminder
+
+[PUT] `/api/students/:reminderId`
+
+```json
+{
+  "studentName": "Yee Lin",
+  "dueDate": "2020-10-17",
+  "dueTime": "09:29:30",
+  "reminder": "Lorem ipsum dolor sit amet"
+}
+```
+
+### Delete a reminder
+
+[DELETE] `/api/students/:reminderId`
+
 ### Data Schemas
 
 ### User:
@@ -129,9 +174,10 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ```json
 {
-  "user_id": "4",
-  "studentName": "John Lee",
-  "studentEmail": "johnlee@gmail.com"
+  "id": 11,
+  "user_id": 7,
+  "studentName": "Smith",
+  "studentEmail": "joh@gmail.com"
 }
 ```
 
@@ -139,8 +185,22 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ```json
 {
-  "user_id": 5,
-  "projectName": "Document Changes",
+  "id": 4,
+  "user_id": 4,
+  "projectName": "Title Changes",
   "projectType": "Needs My Feedback"
+}
+```
+
+### reminders:
+
+```json
+{
+  "id": 7,
+  "user_id": 8,
+  "studentName": "Yee Lin",
+  "dueDate": "2020-10-17",
+  "dueTime": "09:29:30",
+  "reminder": "Lorem ipsum dolor sit amet"
 }
 ```

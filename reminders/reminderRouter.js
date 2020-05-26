@@ -2,13 +2,24 @@ const router = require("express").Router({ mergeParams: true });
 const db = require("./reminderModel");
 const jwt = require("jsonwebtoken");
 
-router.get("/", (req, res) => {
+router.get("/get", (req, res) => {
   const token = req.headers.authorization;
   const secret = process.env.JWT_SECRET || "keepitsecret,keepitsafe!";
   jwt.verify(token, secret, (error, decodedToken) => {
     req.jwt = decodedToken;
   });
   db.findBy(req.jwt.subject)
+    .then((reminder) => {
+      res.status(200).json(reminder);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+router.get("/get/:reminderId", (req, res) => {
+  db.findById(req.params.reminderId)
     .then((reminder) => {
       res.status(200).json(reminder);
     })
