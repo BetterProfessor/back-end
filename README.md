@@ -44,6 +44,10 @@ Required fields for logging in a user:
 
 Returns token used for authorization on other endpoints, and user's info.
 
+### get all users
+
+[FET] `/api/all`
+
 ## Students
 
 ### Get all students:
