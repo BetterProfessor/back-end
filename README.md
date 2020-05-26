@@ -52,7 +52,7 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ### Get individual student:
 
-[GET] ``
+[GET] `/api/students/:studentId`
 
 ### Add a student
 
