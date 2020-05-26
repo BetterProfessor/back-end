@@ -18,6 +18,17 @@ router.get("/get", (req, res) => {
     });
 });
 
+router.get("/get/:reminderId", (req, res) => {
+  db.findById(req.params.reminderId)
+    .then((reminder) => {
+      res.status(200).json(reminder);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 router.post("/", (req, res) => {
   db.add(req.body)
     .then((reminder) => {

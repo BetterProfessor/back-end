@@ -116,11 +116,11 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ### Get all reminders:
 
-[GET] `/api/reminders`
+[GET] `/api/reminders/get`
 
 ### Get individual reminder:
 
-[GET] `/api/reminders/:reminderId`
+[GET] `/api/reminders/get/:reminderId`
 
 ### Add a reminder
 
@@ -128,9 +128,11 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ```json
 {
-  "user_id": 5,
-  "reminderName": "Title Changes",
-  "reminderType": "Needs My Feedback"
+  "user_id": 8,
+  "studentName": "Yee Lin",
+  "dueDate": "2020-10-08",
+  "dueTime": "09:29:30",
+  "reminder": "Lorem ipsum dolor sit amet"
 }
 ```
 
@@ -140,9 +142,10 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ```json
 {
-  "user_id": 5,
-  "reminderName": "Document Changes",
-  "reminderType": "Needs My Feedback"
+  "studentName": "Yee Lin",
+  "dueDate": "2020-10-17",
+  "dueTime": "09:29:30",
+  "reminder": "Lorem ipsum dolor sit amet"
 }
 ```
 
@@ -167,9 +170,21 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ```json
 {
-  "user_id": "4",
-  "studentName": "John Lee",
-  "studentEmail": "johnlee@gmail.com"
+  "id": 11,
+  "user_id": 7,
+  "studentName": "Smith",
+  "studentEmail": "joh@gmail.com"
+}
+```
+
+### Projects:
+
+```json
+{
+  "id": 4,
+  "user_id": 4,
+  "projectName": "Title Changes",
+  "projectType": "Needs My Feedback"
 }
 ```
 
@@ -177,8 +192,11 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ```json
 {
-  "user_id": 5,
-  "projectName": "Document Changes",
-  "projectType": "Needs My Feedback"
+  "id": 7,
+  "user_id": 8,
+  "studentName": "Yee Lin",
+  "dueDate": "2020-10-17",
+  "dueTime": "09:29:30",
+  "reminder": "Lorem ipsum dolor sit amet"
 }
 ```
