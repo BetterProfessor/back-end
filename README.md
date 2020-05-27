@@ -76,7 +76,6 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ```json
 {
-  "my_username": "Ben",
   "studentName": "Chily Smith",
   "studentEmail": "chis@gmail.com"
 }
@@ -102,7 +101,7 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ```json
 {
-  "user_id": 5,
+  "my_username": "Ben",
   "projectName": "Title Changes",
   "projectType": "Needs My Feedback"
 }
@@ -114,7 +113,7 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ```json
 {
-  "user_id": 5,
+  "my_username": "Ben",
   "projectName": "Document Changes",
   "projectType": "Needs My Feedback"
 }
@@ -140,7 +139,7 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ```json
 {
-  "user_id": 8,
+  "my_username": "Ben",
   "studentName": "Yee Lin",
   "dueDate": "2020-10-08",
   "dueTime": "09:29:30",
@@ -183,7 +182,7 @@ Returns token used for authorization on other endpoints, and user's info.
 ```json
 {
   "id": 11,
-  "user_id": 7,
+  "my_username": "Lili",
   "studentName": "Smith",
   "studentEmail": "joh@gmail.com"
 }
@@ -194,7 +193,7 @@ Returns token used for authorization on other endpoints, and user's info.
 ```json
 {
   "id": 4,
-  "user_id": 4,
+  "my_username": "Lili",
   "projectName": "Title Changes",
   "projectType": "Needs My Feedback"
 }
@@ -205,7 +204,7 @@ Returns token used for authorization on other endpoints, and user's info.
 ```json
 {
   "id": 7,
-  "user_id": 8,
+  "my_username": "Lili",
   "studentName": "Yee Lin",
   "dueDate": "2020-10-17",
   "dueTime": "09:29:30",
