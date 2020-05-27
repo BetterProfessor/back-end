@@ -8,7 +8,7 @@ router.get("/get", (req, res) => {
   jwt.verify(token, secret, (error, decodedToken) => {
     req.jwt = decodedToken;
   });
-  db.findBy(req.jwt.subject)
+  db.findBy(req.jwt.username)
     .then((reminder) => {
       res.status(200).json(reminder);
     })
