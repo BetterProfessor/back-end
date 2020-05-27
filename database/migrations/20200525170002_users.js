@@ -21,10 +21,10 @@ exports.up = function (knex) {
     .createTable("projects", (tbl) => {
       tbl.increments();
       tbl
-        .integer("user_id")
+        .string("my_username")
         .unsigned()
         .notNullable()
-        .references("id")
+        .references("username")
         .inTable("users");
       tbl.string("projectName", 256).notNullable();
       tbl.string("projectType", 256).notNullable();
@@ -32,10 +32,10 @@ exports.up = function (knex) {
     .createTable("reminders", (tbl) => {
       tbl.increments();
       tbl
-        .integer("user_id")
+        .string("my_username")
         .unsigned()
         .notNullable()
-        .references("id")
+        .references("username")
         .inTable("users");
       tbl
         .string("studentName")
