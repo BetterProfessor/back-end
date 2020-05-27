@@ -76,7 +76,6 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ```json
 {
-  "my_username": "Ben",
   "studentName": "Chily Smith",
   "studentEmail": "chis@gmail.com"
 }
