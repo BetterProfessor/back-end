@@ -10,10 +10,10 @@ exports.up = function (knex) {
     .createTable("students", (tbl) => {
       tbl.increments();
       tbl
-        .integer("user_id")
+        .string("my_username")
         .unsigned()
         .notNullable()
-        .references("id")
+        .references("username")
         .inTable("users");
       tbl.string("studentName", 256).notNullable().unique();
       tbl.string("studentEmail", 256).notNullable().unique();

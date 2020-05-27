@@ -13,8 +13,8 @@ function find() {
   return db("students");
 }
 
-function findBy(id) {
-  return db("students").where({ user_id: id });
+function findBy(username) {
+  return db("students").where({ my_username: username });
 }
 
 async function add(student) {
