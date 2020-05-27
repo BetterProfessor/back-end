@@ -13,8 +13,8 @@ function find() {
   return db("reminders");
 }
 
-function findBy(id) {
-  return db("reminders").where({ user_id: id });
+function findBy(username) {
+  return db("reminders").where({ my_username: username });
 }
 
 async function add(project) {
