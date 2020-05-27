@@ -64,7 +64,7 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ```json
 {
-  "user_id": "4",
+  "my_username": "Ben",
   "studentName": "John Lee",
   "studentEmail": "johnlee@gmail.com"
 }
@@ -73,6 +73,14 @@ Returns token used for authorization on other endpoints, and user's info.
 ### Edit a student
 
 [PUT] `/api/students/:studentId`
+
+```json
+{
+  "my_username": "Ben",
+  "studentName": "Chily Smith",
+  "studentEmail": "chis@gmail.com"
+}
+```
 
 ### Delete a student
 
