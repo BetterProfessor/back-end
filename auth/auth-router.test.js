@@ -13,14 +13,7 @@ function makeString(length) {
 }
 
 describe("POST to /register", () => {
-  //   it("Returns in JSON format", async () => {
-  //     const res = await supertest(server)
-  //       .post("/api/register")
-  //       .send({ username: "fluxlog", password: "banana" });
-  //     expect(res.type).toBe("application/json");
-  //   });
-
-  describe("should test registering and logging in", () => {
+  describe("testing registering and logging in", () => {
     it("return 201 created", function (done) {
       return supertest(server)
         .post("/api/register")
