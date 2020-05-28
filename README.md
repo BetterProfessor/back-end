@@ -127,15 +127,15 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ### Get all reminders:
 
-[GET] `/api/reminders/get`
+[GET] `/api/projects/reminders/get`
 
 ### Get individual reminder:
 
-[GET] `/api/reminders/get/:reminderId`
+[GET] `/api/projects/reminders/get/:reminderId`
 
 ### Add a reminder
 
-[POST] `/api/reminders`
+[POST] `/api/projects/reminders`
 
 ```json
 {
@@ -149,7 +149,7 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ### Edit a reminder
 
-[PUT] `/api/students/:reminderId`
+[PUT] `/api/projects/:reminderId`
 
 ```json
 {
@@ -162,7 +162,7 @@ Returns token used for authorization on other endpoints, and user's info.
 
 ### Delete a reminder
 
-[DELETE] `/api/students/:reminderId`
+[DELETE] `/api/projects/:reminderId`
 
 ### Data Schemas
 
