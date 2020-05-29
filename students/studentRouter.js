@@ -51,9 +51,9 @@ router.put("/:studentId", (req, res) => {
     });
 });
 
-router.delete("/:studentId", (req, res) => {
-  db.remove(req.params.studentId)
-    .then((student) => {
+router.delete("/:studentsId", (req, res) => {
+  db.remove(req.params.studentsId)
+    .then((project) => {
       res.status(200).json("remove successfully");
     })
     .catch((err) => {

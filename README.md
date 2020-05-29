@@ -207,7 +207,7 @@ Returns token used for authorization on other endpoints, and user's info.
   "my_username": "Lili",
   "studentName": "Yee Lin",
   "dueDate": "2020-10-17",
-  "dueTime": "09:29:30",
+  "dueTime": "09:29 PM",
   "reminder": "Lorem ipsum dolor sit amet"
 }
 ```
