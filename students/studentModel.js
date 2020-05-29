@@ -31,6 +31,7 @@ function update(id, changes) {
   return db("students").where({ id }).update(changes);
 }
 
-function remove(id) {
+async function remove(id) {
+  await db("project_students").where({ student_id: id }).del();
   return db("students").where({ id }).del();
 }

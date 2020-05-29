@@ -1,10 +1,11 @@
 var nodemailer = require("nodemailer");
+const db = require("./database/dbConfig");
 
 var transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "youremail@gmail.com",
-    pass: "yourpassword",
+    // user: "smilewow105@gmail.com",
+    // pass: "xxxxxx220440565",
   },
 });
 
@@ -17,14 +18,20 @@ var mailOptions = {
 
 function emailSender() {
   console.log("email sending");
-  // transporter.sendMail(mailOptions, function (error, info) {
-  //   if (error) {
-  //     console.log(error);
-  //   } else {
-  //     console.log("Email sent: " + info.response);
-  //   }
-  // });
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+  });
 }
+
+function timeLessThan() {
+  return db("reminders");
+}
+
 module.exports = {
   emailSender,
+  timeLessThan,
 };
